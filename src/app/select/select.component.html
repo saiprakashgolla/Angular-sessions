@@ -1,0 +1,39 @@
+<h1 [ngStyle]="{'font-style': styleExp}">saiprakash</h1>
+
+<button (click) = "changeStyle()"> Change Style</button>
+
+<div>
+<select [(ngModel)]="tellWeather">
+  <option value=hot>Hot</option>
+  <option value=cool>Cool</option>
+  <option value=rain>Rain</option>
+
+
+</select>
+<div>
+  <ul [ngSwitch]="tellWeather">
+    <li *ngSwitchCase="'hot'">it is hot</li>
+    <li *ngSwitchCase="'cool'">it is cool</li>
+    <li *ngSwitchCase="'rain'">it is raining</li>
+  </ul>
+</div>
+</div>
+
+<button (click)="tabIndex=1">Tab 1</button>
+<button (click)="tabIndex=2">Tab 2</button>
+<button (click)="tabIndex=3">Tab 3</button>
+
+ <div [ngSwitch]="tabIndex">
+
+    <div class="tab" *ngSwitchCase="1">
+        I am tab 1 content
+    </div>
+
+    <div class="tab" *ngSwitchCase="2">
+        I am tab2 content
+
+        </div>
+
+    <div class="tab" *ngSwitchCase="3">
+        I am tab 3 content
+        </div>

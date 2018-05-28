@@ -1,0 +1,9 @@
+
+<h2>List Items</h2>
+<input type="text"  [(ngModel)]="titleForm" /> {{titleForm}}
+<button (click)="submitForm()">Add</button>
+<span *ngIf="titleForm">wlecome{{tileForm}}</span>
+<ul>
+  <li *ngFor="let item of myArray let i=index">{{item}} 
+    <button (click)=myArray.splice(i,1)>X</button></li>
+</ul>

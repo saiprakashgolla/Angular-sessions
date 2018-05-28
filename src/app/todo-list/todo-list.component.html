@@ -1,0 +1,13 @@
+<h1>Todo App</h1>
+
+<input type="text"  placeholder="Add todo" [(ngModel)]="tileForm" />
+ <button (click)="submitBun()">Add</button>
+
+<ul>
+  <li *ngFor="let item of myArray; let index; index as i;" 
+  [ngClass]="{'doneClass background' : item.done}">
+   <input type="checkbox" [(ngModel)]="item.done"> {{item.data}} 
+   <button (click)="myArray.splice(i,1)">X</button>
+  </li>
+</ul>
+
